@@ -1,6 +1,6 @@
 # CNN-Architecture-VGG16-and-ResNet50
 Comparison of two CNN architecture VGG16 and ResNet50 for detecting Facial attribute
-**DATASET PREPARATION**
+**DATASET PREPARATION** <br>
  Image data has been provided by the Course Leader based 
 on my ID - 001142694, and after requesting an extra dataset, 
 the total dataset consisted of 3998 images. The data 
@@ -38,47 +38,47 @@ testing, and then it is feed to the network.
 
 The model accuracy using both VGG16 and Resnet50 has
 been compared and the best models have been chosen to 
-perform the testing.
+perform the testing. <br>
 
 **A. Model Accuracy with VGG16 and Resnet50 for attribute 
-wrinkles**
+wrinkles** <br>
  After training the model with 10 epochs, the accuracy 
 received is shown in the graph below. For wrinkles, both 
 VGG16 and Resnet50 give a validation accuracy of 0.82. 
 However, overfitting is observed more on the Resnet50. 
 Overfitting occurs when a model learns a function with high 
 variance to model the training data accurately. 
-
+<br>
 **B. Model Accuracy with VGG16 and Resnet50 for attribute 
-freckles**
+freckles**<br>
 The validation accuracy for freckles in both the models give 
-the same result and it is 0.99.
+the same result and it is 0.99.<br>
 
 **C. Model Accuracy with VGG16 and Resnet50 for attribute 
-Glasses**
+Glasses**<br>
  The validation accuracy for glasses in both the models give 
 the same result and it is 0.91. However, there is more 
-overfitting in the Resnet50
+overfitting in the Resnet50.<br>
 
 **D. Model Accuracy with VGG16 and Resnet50 for attribute 
-Hair color**
+Hair color**<br>
 The validation accuracy with hair color is poor and it is 0.24 
-in both the cases
+in both the cases. <br>
 
 **E. Model Accuracy with VGG16 and Resnet50 for attribute 
-Hair top**
+Hair top** <br>
 The validation accuracy with VGG16 and Resnet50 are 
-same in both the cases and it is 0.61.
+same in both the cases and it is 0.61. <br>
 
-**Comparison between VGG16 and Resnet50**
+**Comparison between VGG16 and Resnet50**<br>
  In the given dataset, VGG16 gives better performance than 
 Resnet50 as the overfitting problem is found less in the 
 VGG16 model which is why it is used for testing. One of the 
 reasons of better performance in VGG16 could be because it 
 has no residual block. Moreover, the given dataset is well 
-suited to VGG16.
+suited to VGG16.<br>
 
-**Data Augmentation**
+**Data Augmentation**<br>
 The dataset given contains 3998 images which is not huge 
 and thus data augmentation solves the problem. Data 
 augmentation refers to a collection of techniques that expands 
@@ -86,9 +86,9 @@ the size and quality of training dataset to develop deep
 learning models. In the implementation, horizontal flip, 
 rotation, and zoom has been executed. After data 
 augmentation, the overfitting has been reduced to a great 
-extent.
+extent.<br>
 
-**Testing Results**
+**Testing Results**<br>
  It is visible from the figures below that the prediction 
 results for wrinkles, freckles, hair top and glasses are nearly 
 accurate. However, the prediction with the hair color is not 
