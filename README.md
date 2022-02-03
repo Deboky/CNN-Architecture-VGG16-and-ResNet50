@@ -1,5 +1,5 @@
 # CNN-Architecture-VGG16-and-ResNet50
-Comparison of two CNN architecture VGG16 and ResNet50 for detecting Facial attribute
+Comparison of two CNN architecture VGG16 and ResNet50 for detecting Facial attribute <br>
 **DATASET PREPARATION** <br>
  Image data has been provided by the Course Leader based 
 on my ID - 001142694, and after requesting an extra dataset, 
