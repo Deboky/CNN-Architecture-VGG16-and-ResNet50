@@ -2,7 +2,7 @@
 Comparison of two CNN architecture VGG16 and ResNet50 for detecting Facial attribute <br>
 **DATASET PREPARATION** <br>
  Image data has been provided by the Course Leader based 
-on my ID - 001142694, and after requesting an extra dataset, 
+on my ID - ##, and after requesting an extra dataset, 
 the total dataset consisted of 3998 images. The data 
 comprises both human and not human images. There are five 
 attributes considered: wrinkles, freckles, glasses, hair color, 
