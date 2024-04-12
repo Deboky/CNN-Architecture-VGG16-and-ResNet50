@@ -1,96 +1,38 @@
 # CNN-Architecture-VGG16-and-ResNet50
-Comparison of two CNN architecture VGG16 and ResNet50 for detecting Facial attribute <br>
-**DATASET PREPARATION** <br>
- Image data has been provided by the Course Leader based 
-on my ID - ##, and after requesting an extra dataset, 
-the total dataset consisted of 3998 images. The data 
-comprises both human and not human images. There are five 
-attributes considered: wrinkles, freckles, glasses, hair color, 
-and hair top. Wrinkles have two classes which are 0 and 1 
-where 0 means does not have wrinkles, and 1 means it has 
-wrinkles. Similarly, Freckles have two classes which are 0 
-and 1 where 0 means does not have freckles, and 1 means it 
-has freckles. Glasses has three classes where 0 refers to ‘Does 
-not wear glass’, 1 refers to ‘Wear Normal Glass’ and 2 refers 
-to ‘Wear Sunglasses’. Next, the hair color has 8 classes where 
-0 means ‘Brown’, 1 denotes ‘Black’, 2 indicates ‘Gray’, 3 
-represents ‘Blond’, 4 implies ‘Red’, 5 means ‘White’, 6 
-denotes ‘Mixed’, 7 means ‘Others’ and 8 implies ‘Not 
-visible’. Lastly, hair color has 4 different classes where 0 
-refers to ‘Bald or shaved’, 1 indicates ‘has few hairs’, 2 refers 
-‘has thick hair’ and 4 represents ‘Not visible’. Initially, a 
-python script was provided to convert the images into video 
-(.mp4). An online converter has been used to convert .mp4 
-file to .mov. After that, an annotation tool has been used to 
-label the attributes, and after the completion of 7996 data 
-frames, a text file was generated. The duplicate images have 
-been skipped. The text file was then converted into .csv file 
-where the first column indicates the image names and the 
-second column has the labels of wrinkles, the third has the 
-labels of freckles, fourth has the labels of glasses, fifth the 
-labels of hair color, and lastly, the sixth column has the labels 
-of hair top. Then, five numpy arrays have been created to 
-convert the feature data, which is further used for training. It 
-is then normalized by dividing it by 255 so that the values 
-range between 0 and 1. The image has been resized, and it is 
-taken as 50 by 50. The data has been split into training and 
-testing, and then it is feed to the network.
+## Comparison of VGG16 and ResNet50 CNN Architectures for Facial Attribute Detection
 
-The model accuracy using both VGG16 and Resnet50 has
-been compared and the best models have been chosen to 
-perform the testing. <br>
+### Dataset Preparation
+The dataset for this project was provided by the Course Leader, based on my ID. After requesting additional data, the dataset was expanded to a total of 3,998 images, including both human and non-human subjects. The dataset identifies five facial attributes:
 
-**A. Model Accuracy with VGG16 and Resnet50 for attribute 
-wrinkles** <br>
- After training the model with 10 epochs, the accuracy 
-received is shown in the graph below. For wrinkles, both 
-VGG16 and Resnet50 give a validation accuracy of 0.82. 
-However, overfitting is observed more on the Resnet50. 
-Overfitting occurs when a model learns a function with high 
-variance to model the training data accurately. 
-<br>
-**B. Model Accuracy with VGG16 and Resnet50 for attribute 
-freckles**<br>
-The validation accuracy for freckles in both the models give 
-the same result and it is 0.99.<br>
+- **Wrinkles**: Classified as 0 (no wrinkles) or 1 (has wrinkles)
+- **Freckles**: Classified as 0 (no freckles) or 1 (has freckles)
+- **Glasses**:
+  - 0: Does not wear glasses
+  - 1: Wears normal glasses
+  - 2: Wears sunglasses
+- **Hair Color**: Eight classes ranging from brown to not visible
+- **Hair Top**: Four classes, including bald/shaved and not visible
 
-**C. Model Accuracy with VGG16 and Resnet50 for attribute 
-Glasses**<br>
- The validation accuracy for glasses in both the models give 
-the same result and it is 0.91. However, there is more 
-overfitting in the Resnet50.<br>
+Initially, a Python script was used to convert the image files into video format (.mp4), which was subsequently converted to .mov using an online tool. The images were annotated using a specialized tool, generating 7,996 data frames. Duplicate images were excluded. The data was saved in a CSV file with columns for each attribute. Numpy arrays were used to handle the data, which was normalized (values between 0 and 1) and resized to 50x50 pixels for processing.
 
-**D. Model Accuracy with VGG16 and Resnet50 for attribute 
-Hair color**<br>
-The validation accuracy with hair color is poor and it is 0.24 
-in both the cases. <br>
+### Model Training and Testing
+Both VGG16 and ResNet50 models were trained on the dataset. The data was split into training and testing subsets.
 
-**E. Model Accuracy with VGG16 and Resnet50 for attribute 
-Hair top** <br>
-The validation accuracy with VGG16 and Resnet50 are 
-same in both the cases and it is 0.61. <br>
+#### Model Accuracy
+- **Wrinkles**: Both models achieved a validation accuracy of 0.82, with less overfitting observed in VGG16.
+- **Freckles**: Both models achieved a validation accuracy of 0.99.
+- **Glasses**: Both models reached a validation accuracy of 0.91, with ResNet50 showing more overfitting.
+- **Hair Color**: Both models had a lower validation accuracy of 0.24.
+- **Hair Top**: Both models achieved a validation accuracy of 0.61.
 
-**Comparison between VGG16 and Resnet50**<br>
- In the given dataset, VGG16 gives better performance than 
-Resnet50 as the overfitting problem is found less in the 
-VGG16 model which is why it is used for testing. One of the 
-reasons of better performance in VGG16 could be because it 
-has no residual block. Moreover, the given dataset is well 
-suited to VGG16.<br>
+Overall, VGG16 outperformed ResNet50, particularly in terms of handling overfitting, which was less prevalent in the VGG16 model.
 
-**Data Augmentation**<br>
-The dataset given contains 3998 images which is not huge 
-and thus data augmentation solves the problem. Data 
-augmentation refers to a collection of techniques that expands 
-the size and quality of training dataset to develop deep 
-learning models. In the implementation, horizontal flip, 
-rotation, and zoom has been executed. After data 
-augmentation, the overfitting has been reduced to a great 
-extent.<br>
+### Comparison
+VGG16 is generally more effective for our dataset, likely due to the absence of residual blocks, which seems to suit our specific data characteristics better.
 
-**Testing Results**<br>
- It is visible from the figures below that the prediction 
-results for wrinkles, freckles, hair top and glasses are nearly 
-accurate. However, the prediction with the hair color is not 
-satisfactory. It is because the accuracy rate of hair color is 
-poor
+### Data Augmentation
+To address the relatively small size of the dataset, data augmentation techniques such as horizontal flipping, rotation, and zoom were applied. This significantly helped in reducing overfitting.
+
+### Testing Results
+The testing phase showed high accuracy for attributes like wrinkles, freckles, and glasses, but the results for hair color were unsatisfactory due to the poor model performance on this attribute.
+
